@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D Tic-Tac-Toe Online</title>
+    <style>
+        body { margin: 0; overflow: hidden; font-family: sans-serif; }
+        #lobby {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            z-index: 10;
+        }
+        #status {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 24px;
+            text-shadow: 1px 1px 2px black;
+            z-index: 5;
+            display: none;
+        }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+    <div id="lobby">
+        <h1>3D Tic-Tac-Toe</h1>
+        <input type="text" id="roomInput" placeholder="Enter Room Name">
+        <button id="joinBtn">Join Game</button>
+    </div>
+    <div id="status">Waiting...</div>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <script src="/static/game.js"></script>
+</body>
+</html>
